@@ -1,0 +1,14 @@
+# Logging #
+###########
+**/Logs
+*.log
+
+# Folders #
+###########
+
+**/Materials/Images
+**/Materials/
+
+# Jupyter #
+###########
+**/.ipynb_checkpoints/
