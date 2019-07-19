@@ -1,0 +1,15 @@
+Create and environment from a template 
+ 
+From command line (might need to run as admin): 
+ 
+conda env create --name YOUR_ENV_NAME --file "\template.yml" 
+ 
+To install the environment as a jupyter kernel 
+ 
+From command line (might need to run as admin): 
+ 
+activate YOUR_ENV_NAMEl 
+ 
+python -m ipykernel install --user --name YOUR_ENV_NAMEl --display-name "YOUR_ENV_NAME_DISPLAY_NAME " 
+ 
+deactivate 
