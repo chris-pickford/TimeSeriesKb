@@ -10,7 +10,7 @@ if OS == 'Server':
 elif OS == 'Local':
     sys.path.append(os.path.join(os.path.expanduser('~'), 'Documents', 'Coding', 'Python', 'PyCharm', 'Projects'))
 
-from UtilityPackagesV2.config import config
+from DataCrane.config import config
 
 class credentials(object):
     def __init__(self):

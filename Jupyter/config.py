@@ -10,7 +10,7 @@ if OS == 'Server':
 elif OS == 'Local':
     sys.path.append(os.path.join(os.path.expanduser('~'), 'Documents', 'Coding', 'Python', 'Projects'))
 
-from UtilityPackagesV2.config import config
+from DataCrane.config import config
 
 SqlVarReplacements = {
     '@StartDate': '2018-09-01',

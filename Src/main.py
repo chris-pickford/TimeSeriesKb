@@ -39,14 +39,14 @@ _ = config.set_logging(logFileName)
 
 rootPath = config.ROOT
 sys.path.append(os.path.join(rootPath))
-sys.path.append(os.path.join(config.PACKAGE_ROOT, 'UtilityPackagesV2'))
+sys.path.append(os.path.join(config.PACKAGE_ROOT, 'DataCrane'))
 
 config.abort_pass_programme(logString='-------Program Started-------')
 
 from UtilityPackagesV2.dbutility import gnrl_database_interaction as gdbi
 from UtilityPackagesV2.dbutility import credentials
 from UtilityPackagesV2.mt_email import email_
-config.abort_pass_programme(logString=' Imported UtilityPackages ')
+config.abort_pass_programme(logString=' Imported DataCrane ')
 
 ##################################################################################################################
 
