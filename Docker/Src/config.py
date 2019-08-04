@@ -3,28 +3,31 @@ import os
 import logging
 import sys
 
-OS = 'Local'
+OS = 'Docker'
 
 if OS == 'Server':
     sys.path.append(os.path.join(os.path.expanduser('~:'), os.path.sep, 'PYTHON','Datascience Packages'))
 elif OS == 'Local':
     sys.path.append(os.path.join(os.path.expanduser('~'), 'Documents', 'Coding', 'Python','Projects'))
+elif OS == 'Docker':
 
-from DataCrane.config import config
+    sys.path.append('./home/')
+    sys.path.append('./home/Packages/')
 
-config.googleServiceAccountPrivateKey = os.path.join(os.path.expanduser('~')
-                                                          , os.path.sep
-                                                          , 'Users'
-                                                          , 'chrispickford'
-                                                          , 'Documents'
-                                                          , 'Coding'
-                                                          , 'Python'
-                                                          , 'Datascience'
-                                                          , 'PRIVATE KEYS'
-                                                          , 'Google'
-                                                          , 'Datascience Service Account'
-                                                          , 'privateKey.json'
-                                                          )
+print('/n/nSystem path: ')
+print(sys.path)
+
+try:
+    cwd = os.getcwd()
+    path = os.path.dirname(os.path.abspath(cwd))
+    sys.path.append(os.path.join(path,'Packages'))
+    from DataCrane.config import config
+    print(' ammend path worked')
+except:
+    print('adding packages path to the path didnt work')
+
+
+
 
 class credentials(object):
     def __init__(self):
@@ -44,6 +47,10 @@ class privateConfig(config):
             self.ROOT = os.path.join(os.path.expanduser('~:'), os.path.sep, 'Chris Pickford', 'Projects')
             self.PROJECT_ROOT = os.path.join(self.ROOT, PROJECT_NAME)
             self.PACKAGE_ROOT = os.path.join(os.path.expanduser('~:'), os.path.sep, 'Datascience Packages')
+        elif OS == 'Docker':
+            self.ROOT = os.path.expanduser('./')
+            self.PROJECT_ROOT = os.path.join(self.ROOT, PROJECT_NAME)
+            self.PACKAGE_ROOT = os.path.join(self.ROOT, 'Packages')
 
         # Add the project root and package roots to the path
         sys.path.append(self.ROOT)

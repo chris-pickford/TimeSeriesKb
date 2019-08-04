@@ -18,6 +18,20 @@ SqlVarReplacements = {
     
 }
 
+config.googleServiceAccountPrivateKey = os.path.join(os.path.expanduser('~')
+                                                          , os.path.sep
+                                                          , 'Users'
+                                                          , 'chrispickford'
+                                                          , 'Documents'
+                                                          , 'Coding'
+                                                          , 'Python'
+                                                          , 'Datascience'
+                                                          , 'PRIVATE KEYS'
+                                                          , 'Google'
+                                                          , 'Datascience Service Account'
+                                                          , 'privateKey.json'
+                                                          )
+
 class credentials(object):
     def __init__(self):
         self.username = 'datascience'

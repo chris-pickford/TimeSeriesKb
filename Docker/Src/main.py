@@ -70,7 +70,7 @@ def main():
     print('Got to pre execution stage')
 
     message, data = sqlConnection.execute_script(saveToTable='crafty-ring-247514.Kickboxing_attendance.test')
-    print(message)
+    print(message['traceback'])
 
     print('Program complete')
 
