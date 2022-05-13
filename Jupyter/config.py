@@ -10,13 +10,27 @@ if OS == 'Server':
 elif OS == 'Local':
     sys.path.append(os.path.join(os.path.expanduser('~'), 'Documents', 'Coding', 'Python', 'Projects'))
 
-from UtilityPackagesV2.config import config
+from DataCrane.config import config
 
 SqlVarReplacements = {
     '@StartDate': '2018-09-01',
     '@EndDate': '2018-10-01',
     
 }
+
+config.googleServiceAccountPrivateKey = os.path.join(os.path.expanduser('~')
+                                                          , os.path.sep
+                                                          , 'Users'
+                                                          , 'chrispickford'
+                                                          , 'Documents'
+                                                          , 'Coding'
+                                                          , 'Python'
+                                                          , 'Datascience'
+                                                          , 'PRIVATE KEYS'
+                                                          , 'Google'
+                                                          , 'Datascience Service Account'
+                                                          , 'privateKey.json'
+                                                          )
 
 class credentials(object):
     def __init__(self):
