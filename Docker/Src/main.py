@@ -16,8 +16,7 @@ Constant:           THIS_IS_A_CONSTANT
 
 __status__  = "development"
 __version__ = 'mdl 1.0.1'
-__date__    = "DATE"
-__author__  = 'AUTHOR'
+__author__  = 'Chris Pickford <drchrispickford@gmail.com>'
 
 '''
 Ensure any virtual environments have been activated before running scripts

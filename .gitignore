@@ -12,3 +12,8 @@
 # Jupyter #
 ###########
 **/.ipynb_checkpoints/
+**/__pycache__/
+
+# Other #
+###########
+**/.DS_Store
