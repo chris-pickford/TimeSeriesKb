@@ -1,0 +1,19 @@
+# Logging #
+###########
+**/Logs
+*.log
+
+# Folders #
+###########
+
+**/Materials/Images
+**/Materials/
+
+# Jupyter #
+###########
+**/.ipynb_checkpoints/
+**/__pycache__/
+
+# Other #
+###########
+**/.DS_Store
